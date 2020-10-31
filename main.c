@@ -55,6 +55,7 @@ static void	_check_ft_strcpy(void)
 	printf("Empty str\n");
 	str = "";
 	dst = calloc(strlen(str) + 1, 1);
+	ft_dst = calloc(strlen(str) + 1, 1);
 	printf("str = \"%s\"\n", str);
 	printf("strcpy   : \"%s\" || ft_strcpy: \"%s\"\n", strcpy(dst, str), ft_strcpy(ft_dst, str));
 	free(ft_dst);
@@ -63,6 +64,7 @@ static void	_check_ft_strcpy(void)
 	printf("Big str\n");
 	str = "qwertyuiopasdfghjkl\n\tzxcvbnm12\n\n34567890QWERTYUI:::OPASD\\FGHJK{}LZXCVBNM0987654321mnbvcxzlkjhgfdsapoiuytrewq";
 	dst = calloc(strlen(str) + 1, 1);
+	ft_dst = calloc(strlen(str) + 1, 1);
 	printf("str = \"%s\"\n", str);
 	printf("strcpy   : \"%s\" || ft_strcpy: \"%s\"\n", strcpy(dst, str), ft_strcpy(ft_dst, str));
 	free(ft_dst);
@@ -85,14 +87,14 @@ static void	_check_ft_strcmp(void)
 
 	str = "Hello World!";
 	dst = "He1Lo";
-	printf("Not equal\n");
+	printf("Not equal s1\n");
 	printf("str1 = \"%s\"\n", str);
 	printf("str2 = \"%s\"\n", dst);
 	printf("strcmp   : %d || ft_strcmp: %d\n", strcmp(str, dst), ft_strcmp(str, dst));
 
 	str = "Hello World!";
-	dst = "1ello";
-	printf("Not equal\n");
+	dst = "Hello World!1234";
+	printf("Not equal s2\n");
 	printf("str1 = \"%s\"\n", str);
 	printf("str2 = \"%s\"\n", dst);
 	printf("strcmp   : %d || ft_strcmp: %d\n", strcmp(str, dst), ft_strcmp(str, dst));
@@ -240,6 +242,7 @@ static void	_check_ft_strdup(void)
 	str = "";
 	printf("str = \"%s\"\n", str);
 	dst = strdup(str);
+	ft_dst = ft_strdup(str);
 	printf("strdup   : \"%s\" || ft_strdup: \"%s\"\n", dst, ft_dst);
 	free(dst);
 	free(ft_dst);

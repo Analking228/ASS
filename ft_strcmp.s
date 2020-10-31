@@ -2,15 +2,16 @@
 
 			section	.text
 _ft_strcmp:	
-			mov rax, 0
-			dec rax
+			mov rcx, 0
+			dec rcx
 	while:
-			mov cl, BYTE[rdi + rax]
-			mov bl, BYTE[rsi + rax]
-			cmp cl, bl
+			inc	rcx
+			mov al, BYTE[rdi + rcx]
+			mov bl, BYTE[rsi + rcx]
+			cmp al, bl
 			jne	endwhile
-			cmp	cl, 0
-			jnz	while
+			cmp	al, 0
+			jne	while
 	endwhile:
-			sub cl, bl
+			sub al, bl
 			ret

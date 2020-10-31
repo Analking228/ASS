@@ -24,7 +24,7 @@ fclean: clean
 
 re: fclean all
 
-run: $(NAME) main.c
+run: re
 	$(CC) $(FLAGS) main.c -I. -L. -lasm -o test.out
 	./test.out
 
