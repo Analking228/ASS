@@ -20,7 +20,8 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
-	rm -f test
+	rm -f test.out
+	rm -f out*
 
 re: fclean all
 

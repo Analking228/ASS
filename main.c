@@ -66,7 +66,8 @@ static void	_check_ft_strcpy(void)
 	dst = calloc(strlen(str) + 1, 1);
 	ft_dst = calloc(strlen(str) + 1, 1);
 	printf("str = \"%s\"\n", str);
-	printf("strcpy   : \"%s\" || ft_strcpy: \"%s\"\n", strcpy(dst, str), ft_strcpy(ft_dst, str));
+	printf("strcpy   : \"%s\"\n", strcpy(dst, str));
+	printf("ft_strcpy: \"%s\"\n", ft_strcpy(ft_dst, str));
 	free(ft_dst);
 	free(dst);
 }
@@ -134,19 +135,19 @@ static void	_check_ft_write(void)
 
 	str = "Hello World!";
 	printf("FILE: str = \"%s\"\n", str);
-	fd = open("output_file_std.txt", O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
+	fd = open("output_std.txt", O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
 	res1 = write(fd, str, strlen(str));
 	printf("write   : res = %d\n", res1);
 	close(fd);
 	printf("write:\n");
-	system("cat output_file_std.txt");
+	system("cat output_std.txt");
 	printf("\n");
-	fd = open("output_file_ft.txt", O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
+	fd = open("output_ft.txt", O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
 	res2 = ft_write(fd, str, strlen(str));
 	printf("ft_write: res = %d\n", res2);
 	close(fd);
 	printf("ft_write:\n");
-	system("cat output_file_ft.txt");
+	system("cat output_ft.txt");
 	printf("\n\n");
 
 	printf("BAD FD\n");
