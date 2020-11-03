@@ -2,8 +2,7 @@
 
 			section	.text
 _ft_strcpy:	
-			mov		rax, 0
-			dec		rax
+			mov		rax, -1
 	while:	
 			inc		rax
 			mov		cl, BYTE[rsi + rax]

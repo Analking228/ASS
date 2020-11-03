@@ -2,13 +2,14 @@
 			extern	___error
 
 			section	.text
-_ft_read:	mov		rax, 0x2000003
+_ft_read:	
+			mov		rax, 0x2000003
 			syscall
 			jnc		end
 			push	rax
 			call	___error
-			pop		rbx
-			mov		[rax], rbx
+			pop		rcx
+			mov		[rax], rcx
 			mov		rax, -1
 	end:	
 			ret

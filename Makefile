@@ -2,7 +2,7 @@ NAME = libasm.a
 
 ACC = nasm
 CC = gcc
-FLAGS = -Wall -Wextra -Werror
+FLAGS = #-Wall -Wextra -Werror
 
 SRC = ft_strlen.s ft_strcmp.s ft_strcpy.s ft_write.s ft_read.s ft_strdup.s
 OBJ = $(SRC:.s=.o)

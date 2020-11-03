@@ -14,6 +14,8 @@
 # define _LIBASM_H_
 
 # include <unistd.h>
+# define _WRITE 0x2000004
+# define _READ 0x2000003
 
 int		ft_strcmp(const char *s1, const char *s2);
 char 	*ft_strdup(const char *s);
