@@ -263,17 +263,12 @@ static void	_check_ft_strdup(void)
 
 int			main(void)
 {
-	/*_check_ft_strlen();
+	_check_ft_strlen();
 	_check_ft_strcpy();
 	_check_ft_strcmp();
 	_check_ft_write();
 	_check_ft_read();
-	_check_ft_strdup();*/
-
-	printf("%d\n", strcmp("a", "z"));
-	printf("%d\n", ft_strcmp("a", "z"));
-	printf("%d\n", strcmp("z", "a"));
-	printf("%d\n", ft_strcmp("z", "a"));
+	_check_ft_strdup();
 
 	return (0);
 }
