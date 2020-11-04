@@ -8,14 +8,16 @@ _ft_strdup:	call	_ft_strlen
 			add		rax, 1
 			push	rdi
 			mov		rdi, rax
-			mov		rsi, 4
+			mov		rsi, 1
 			call	_calloc
 			cmp		rax, 0
-			jz		end
+			jz		error
 			mov		rdi, rax
 			pop		rsi
-			call	_ft_strcpy
-	end:	
+			call	_ft_strcpy	
+			ret
+	error:
+			mov		rax, -1
 			ret
 
 
