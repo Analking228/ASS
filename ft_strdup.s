@@ -2,6 +2,7 @@
 			extern	_ft_strlen
 			extern	_ft_strcpy
 			extern	_calloc
+			extern	___error
 
 			section	.text
 _ft_strdup:	call	_ft_strlen
@@ -14,10 +15,11 @@ _ft_strdup:	call	_ft_strlen
 			jz		error
 			mov		rdi, rax
 			pop		rsi
-			call	_ft_strcpy	
-			ret
+			call	_ft_strcpy
+			ret			
 	error:
-			mov		rax, -1
+			call	___error
+			mov		[rax], 12
+			mov		rax, 0
 			ret
-
-
+			
