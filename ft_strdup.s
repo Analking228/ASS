@@ -5,7 +5,9 @@
 			extern	___error
 
 			section	.text
-_ft_strdup:	call	_ft_strlen
+_ft_strdup:	
+			mov		rcx, 12
+			call	_ft_strlen
 			add		rax, 1
 			push	rdi
 			mov		rdi, rax
@@ -19,7 +21,7 @@ _ft_strdup:	call	_ft_strlen
 			ret			
 	error:
 			call	___error
-			mov		[rax], 12
+			mov		[rax], rcx
 			mov		rax, 0
 			ret
 			
