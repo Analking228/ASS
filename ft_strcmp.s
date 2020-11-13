@@ -15,6 +15,6 @@ _ft_strcmp:
 			cmp		al, bl
 			je		while
 	endwhile:
-			pop		rbx
 			sub 	rax, rbx
+			pop		rbx
 			ret
